@@ -1,11 +1,8 @@
 import csv
 import datetime
-import json
-import logging
 import os
 import pathlib
 import re
-import sys
 from http import HTTPStatus
 from multiprocessing import Pool
 from pathlib import Path
