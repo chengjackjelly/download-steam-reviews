@@ -9,7 +9,8 @@ before_script:
 run test:
   stage: test
   only:
-    - master
+    refs:
+      - master
     changes:
       - easysteam/
   script:
