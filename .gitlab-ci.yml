@@ -3,8 +3,8 @@ stages:
 
 before_script:
   - python -m venv venv
-  - pip install -r requirements.txt
   - ./venv/Activate.ps1
+  - pip install -r requirements.txt
 
 run test:
   stage: test
