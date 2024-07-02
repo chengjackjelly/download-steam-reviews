@@ -9,8 +9,7 @@ flake8:
     - flake8 .
 
 run test:
-  stage:
-    - test
+  stage: test
   only:
     - master
   before_script:
