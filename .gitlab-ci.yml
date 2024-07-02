@@ -10,5 +10,7 @@ run test:
   stage: test
   only:
     - master
+    changes:
+      - easysteam/
   script:
     - python -m pytest
