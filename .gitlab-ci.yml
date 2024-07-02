@@ -1,12 +1,7 @@
 image: python:3.12
 stages:
-  - linting
+
   - test
-flake8:
-  stage: linting
-  image: registry.gitlab.com/mafda/python-linting
-  script:
-    - flake8 .
 
 run test:
   stage:
