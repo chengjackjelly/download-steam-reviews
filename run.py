@@ -1,4 +1,4 @@
-from easysteam import download_reviews
+from easysteam.download_reviews import get_steam_api_url
 
-api_url=download_reviews.get_steam_api_url("814380")
+api_url = get_steam_api_url("814380")
 print(api_url)

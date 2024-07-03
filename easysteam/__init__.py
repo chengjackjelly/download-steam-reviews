@@ -1,1 +1,1 @@
-from .download_reviews import get_steam_api_url
+__all__ = ["get_steam_api_url"]
