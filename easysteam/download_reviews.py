@@ -11,6 +11,7 @@ from typing import Tuple
 import requests
 
 
+
 def get_request(chosen_request_params: dict = None) -> dict:  # type: ignore
     """get request parameter and set appid"""
     request = dict(get_default_request_parameters(chosen_request_params))
