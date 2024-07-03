@@ -47,7 +47,9 @@ def get_steam_api_url(app_id: str) -> str:
 
 
 def download_reviews_for_app_id_with_offset(
-    app_id: str, cursor: str = "*", chosen_request_params: dict = None  # type: ignore
+    app_id: str,
+    cursor: str = "*",
+    chosen_request_params: dict = None,  # type: ignore
 ) -> dict:
     """download reviews with offset. only one api request is send here"""
     req_data = get_request(chosen_request_params)
@@ -80,7 +82,6 @@ def get_dummy_query_summary():
 
 
 def get_output_filename(app_id: str) -> Path:
-
     return Path.joinpath(get_data_path(), f"review_{app_id}.csv")
 
 
@@ -116,7 +117,9 @@ def filter_reviews_by_id(json_data: dict, exclude_ids: set) -> dict:
 
 
 def download_reviews_for_app_id(
-    app_id: str, chosen_request_params: dict = None, start_cursor: str = "*"  # type: ignore
+    app_id: str,
+    chosen_request_params: dict = None,
+    start_cursor: str = "*",  # type: ignore
 ):
     """download all reviews for a app"""
     offset = 0
