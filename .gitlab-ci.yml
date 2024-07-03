@@ -1,4 +1,5 @@
 stages:
+  - linting
   - test
 
 before_script:
@@ -6,6 +7,11 @@ before_script:
   - ./venv/Scripts/Activate.ps1
   - pip install -r requirements.txt
 
+run linting:
+  stage: linting
+  script:
+    - ruff check
+    
 run test:
   stage: test
   rules:
