@@ -8,11 +8,9 @@ before_script:
 
 run test:
   stage: test
-  only:
-    refs:
-      - master
   rules:
-    changes:
-      - easysteam/**/*
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      changes:
+        - easysteam/**/*
   script:
     - python -m pytest
